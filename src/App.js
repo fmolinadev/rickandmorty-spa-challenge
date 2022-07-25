@@ -1,8 +1,18 @@
+import Landing from "./components/Landing";
+import Error404 from "./components/Error404.jsx";
+import Header from "./components/Header/Index.jsx";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
 function App() {
   return (
-    <div className="App">
-      <h1>Setup</h1>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Landing />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </>
   );
 }
 
