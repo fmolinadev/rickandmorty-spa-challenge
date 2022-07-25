@@ -3,7 +3,7 @@ const Mobile = ({ open, setOpen }) => {
   return (
     <div>
       <div onClick={() => setOpen(!open)}>
-        <i class="fi fi-br-cross"></i>
+        <i className="fi fi-br-cross"></i>
       </div>
       <div onClick={() => setOpen(!open)}>
         <ul aria-label="options">
