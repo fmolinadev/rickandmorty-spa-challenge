@@ -1,16 +1,16 @@
-import Landing from "./components/Landing";
-import Error404 from "./components/Error404.jsx";
+import LandingPage from "./pages/LandingPage";
+import ErrorPage from "./pages/ErrorPage.jsx";
 import Header from "./components/Header/Index.jsx";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
+import HomePage from "./pages/HomePage.jsx";
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Landing />} />
-        <Route exact path="/home" element={<Home />} />
-        <Route path="*" element={<Error404 />} />
+        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/home" element={<HomePage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );
