@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/home" element={<HomePage />} />
-        {/* <Route exact path="/history" element={<HistoryPage />} /> */}
+        {/* <Route exact path="/history/:charid" element={<HistoryPage />} /> */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
