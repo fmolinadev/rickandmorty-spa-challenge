@@ -1,6 +1,7 @@
 import React from "react";
 import Placeholder from "../assets/placeholder-img.png";
 import Loader from "./Loader";
+import { Button } from "../styles/Button";
 
 const Character = ({ infoCharacter, runInfo, loader }) => {
   return (
@@ -8,7 +9,7 @@ const Character = ({ infoCharacter, runInfo, loader }) => {
       {!infoCharacter ? (
         <>
           <h1>Click on the button to begin!</h1>
-          <button onClick={() => runInfo()}>See a character</button>
+          <Button onClick={() => runInfo()}>See a character</Button>
         </>
       ) : loader ? (
         <Loader />
@@ -76,7 +77,7 @@ const Character = ({ infoCharacter, runInfo, loader }) => {
               </div>
             </div>
           </div>
-          <button onClick={() => runInfo()}>Generate a new character</button>
+          <Button onClick={() => runInfo()}>Generate a new character</Button>
         </>
       )}
     </section>
