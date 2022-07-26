@@ -5,10 +5,12 @@ import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 // import HistoryPage from "./pages/HistoryPage";
+import GlobalStyle from "./styles/GlobalStyles";
 
 function App() {
   return (
     <>
+      <GlobalStyle />
       <Header />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
