@@ -19,32 +19,34 @@ const History = ({ history, open, setOpen, loader, error, setResult }) => {
   if (error) return <Text>Ups...</Text>;
 
   return (
-    <HistoryContainer>
+    <>
       <ToggleMenuHistory onClick={() => setOpen(!open)}>
-        <i className="fi fi-br-cross"></i>
+        {/* <i className="fi fi-br-cross"></i> */}
       </ToggleMenuHistory>
-      {!history.length ? (
-        <Text>Not history</Text>
-      ) : loader ? (
-        <Text>Updating history...</Text>
-      ) : (
-        history.map((char, index) => {
-          return (
-            <CardHistory key={index} style={{ textDecoration: "inherit" }}>
-              <ImageHistory
-                src={char.image}
-                alt="character"
-                aria-label="character image"
-              />
-              <ResumeHistory>
-                <Name>{char.name}</Name>
-                <Button onClick={() => goToCharacter(char)}>View all</Button>
-              </ResumeHistory>
-            </CardHistory>
-          );
-        })
-      )}
-    </HistoryContainer>
+      <HistoryContainer>
+        {!history.length ? (
+          <Text>Not history</Text>
+        ) : loader ? (
+          <Text>Updating history...</Text>
+        ) : (
+          history.map((char, index) => {
+            return (
+              <CardHistory key={index} style={{ textDecoration: "inherit" }}>
+                <ImageHistory
+                  src={char.image}
+                  alt="character"
+                  aria-label="character image"
+                />
+                <ResumeHistory>
+                  <Name>{char.name}</Name>
+                  <Button onClick={() => goToCharacter(char)}>View</Button>
+                </ResumeHistory>
+              </CardHistory>
+            );
+          })
+        )}
+      </HistoryContainer>
+    </>
   );
 };
 
