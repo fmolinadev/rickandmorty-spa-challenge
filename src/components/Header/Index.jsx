@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import Web from "./NavWeb";
 import Mobile from "./NavMobile";
+import logo from "../../assets/rick-and-morty-name-png.png";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <header>
-      <span>Rick and Morty</span>
+      <img
+        src={logo}
+        alt="logo"
+        aria-label="logo spa"
+        height={"60px"}
+        width={"170px"}
+      />
       <div>
         <div>
           <Web />

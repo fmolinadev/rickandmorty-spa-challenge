@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 const Web = () => {
+  const noDecoration = { textDecoration: "none", color: "inherit" };
   return (
     <div>
       <ul aria-label="options">
         <li>
-          <Link to="/home">
+          <Link to="/home" style={noDecoration}>
             <span>Home</span>
           </Link>
         </li>

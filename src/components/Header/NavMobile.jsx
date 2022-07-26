@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 const Mobile = ({ open, setOpen }) => {
+  const noDecoration = { textDecoration: "none", color: "inherit" };
   return (
     <div>
       <div onClick={() => setOpen(!open)}>
@@ -8,7 +9,7 @@ const Mobile = ({ open, setOpen }) => {
       <div onClick={() => setOpen(!open)}>
         <ul aria-label="options">
           <li>
-            <Link to="/home">
+            <Link to="/home" style={noDecoration}>
               <span>Home</span>
             </Link>
           </li>
