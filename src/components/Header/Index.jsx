@@ -2,31 +2,32 @@ import React, { useState } from "react";
 import Web from "./NavWeb";
 import Mobile from "./NavMobile";
 import logo from "../../assets/rick-and-morty-name-png.png";
+import {
+  HeaderContainer,
+  BrandSite,
+  MenuContainer,
+  MenuContainerWeb,
+  ToggleMenu,
+} from "../../styles/MainHeader";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header>
-      <img
-        src={logo}
-        alt="logo"
-        aria-label="logo spa"
-        height={"60px"}
-        width={"170px"}
-      />
-      <div>
-        <div>
+    <HeaderContainer>
+      <BrandSite src={logo} alt="logo" aria-label="logo spa" />
+      <MenuContainer>
+        <MenuContainerWeb aria-label="menu">
           <Web />
-        </div>
-        <div>
+        </MenuContainerWeb>
+        <ToggleMenu>
           <div onClick={() => setOpen(!open)} aria-label="menu">
             <i className="fi fi-br-menu-burger"></i>
           </div>
           {open && <Mobile open={open} setOpen={setOpen} />}
-        </div>
-      </div>
-    </header>
+        </ToggleMenu>
+      </MenuContainer>
+    </HeaderContainer>
   );
 };
 
