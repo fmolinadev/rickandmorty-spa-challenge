@@ -36,12 +36,16 @@ const Body = () => {
         />
       </CharacterContainer>
       <div>
-        <ToggleMenu>
-          <div onClick={() => setOpen(!open)} aria-label="menu">
-            <i className="fi fi-br-ballot"></i>
-          </div>
-          <h5>History</h5>
-        </ToggleMenu>
+        {resultRequest ? (
+          <ToggleMenu>
+            <div onClick={() => setOpen(!open)} aria-label="menu">
+              <i className="fi fi-br-ballot"></i>
+            </div>
+            <h5>View History</h5>
+          </ToggleMenu>
+        ) : (
+          false
+        )}
         {open && (
           <History
             history={history}
