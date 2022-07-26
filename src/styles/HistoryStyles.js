@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const HistoryContainer = styled.section`
-  height: 480px;
+  height: 350px;
   overflow-y: auto;
   scroll-behavior: smooth;
+  ::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
 `;
 
 export const ToggleMenuHistory = styled.div`
@@ -29,6 +33,8 @@ export const CardHistory = styled.article`
 export const ImageHistory = styled.img`
   height: 50px;
   width: 50px;
+  border: 1px;
+  border-radius: 6px;
 `;
 
 export const ResumeHistory = styled.div`
