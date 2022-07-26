@@ -10,6 +10,7 @@ export const BodyContainer = styled.div`
   @media (max-width: 720px) {
     grid-template-columns: 1fr;
     grid-row-gap: 4em;
+    grid-column-gap: 3em;
   }
 `;
 
