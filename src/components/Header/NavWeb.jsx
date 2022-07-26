@@ -1,21 +1,22 @@
 import { Link } from "react-router-dom";
+import { Navbar, NavbarOptions, OptionName } from "../../styles/NavbarWeb.js";
 const Web = () => {
   const noDecoration = { textDecoration: "none", color: "inherit" };
   return (
-    <div>
-      <ul aria-label="options">
-        <li>
+    <Navbar>
+      <NavbarOptions aria-label="options">
+        <OptionName>
           <Link to="/home" style={noDecoration}>
-            <span>Home</span>
+            Home
           </Link>
-        </li>
-        <li>
-          {/* <Link to="/history" style={noDecoration}> */}
-          <span>History</span>
-          {/* </Link> */}
-        </li>
-      </ul>
-    </div>
+        </OptionName>
+        <OptionName>
+          <Link to="/about" style={noDecoration}>
+            About
+          </Link>
+        </OptionName>
+      </NavbarOptions>
+    </Navbar>
   );
 };
 
