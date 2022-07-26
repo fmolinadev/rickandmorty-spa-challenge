@@ -8,7 +8,7 @@ import {
   ImageHistory,
   ResumeHistory,
   Name,
-} from "../styles/History";
+} from "../styles/HistoryStyles";
 
 const History = ({ history, open, setOpen, loader, error, setResult }) => {
   const goToCharacter = (char) => {
