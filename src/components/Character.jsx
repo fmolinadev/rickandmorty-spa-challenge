@@ -2,8 +2,11 @@ import React from "react";
 import Placeholder from "../assets/placeholder-img.png";
 import Loader from "./Loader";
 import { Button } from "../styles/Button";
+import ErrorAlert from "./ErrorAlert";
 
-const Character = ({ infoCharacter, runInfo, loader }) => {
+const Character = ({ infoCharacter, runInfo, loader, error }) => {
+  if (error) return <ErrorAlert />;
+
   return (
     <section>
       {!infoCharacter ? (
