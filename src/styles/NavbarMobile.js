@@ -5,16 +5,18 @@ export const NavbarMobile = styled.nav`
   flex-direction: column;
   position: absolute;
   height: 100vh;
-  width: 50vh;
+  width: 40vh;
   right: 0;
   top: -6px;
-  padding: 18px 16px;
+  padding: 18px 1px;
+  z-index: 999;
 `;
 
 export const ToggleIcon = styled.div`
   display: flex;
   justify-content: flex-end;
   font-size: 22px;
+  background-color: white;
 `;
 
 export const NavbarOptions = styled.ul`
@@ -25,7 +27,8 @@ export const NavbarOptions = styled.ul`
   margin: auto;
   padding-top: 22px;
   width: 100%;
-  height: 98%;
+  height: 100%;
+  background-color: white;
 `;
 
 export const Option = styled.li`

@@ -5,11 +5,7 @@ const Web = () => {
   return (
     <Navbar>
       <NavbarOptions aria-label="options">
-        <OptionName>
-          <Link to="/home" style={noDecoration}>
-            Home
-          </Link>
-        </OptionName>
+        <OptionName></OptionName>
         <OptionName>
           <Link to="/about" style={noDecoration}>
             About
