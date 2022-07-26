@@ -1,11 +1,14 @@
 import React from "react";
-import Loader from "./Loader";
+import ErrorAlert from "./ErrorAlert";
+import { Button } from "../styles/Button";
 
-const History = ({ history, open, setOpen, loader, setResult }) => {
+const History = ({ history, open, setOpen, loader, error, setResult }) => {
   const goToCharacter = (char) => {
     // console.log("CHAR-->", char);
     setResult(char);
   };
+
+  if (error) return <ErrorAlert />;
 
   return (
     <section>
@@ -15,7 +18,7 @@ const History = ({ history, open, setOpen, loader, setResult }) => {
       {!history.length ? (
         <h2>Not history</h2>
       ) : loader ? (
-        <Loader />
+        <h4>Updating history...</h4>
       ) : (
         history.map((char, index) => {
           return (
@@ -27,9 +30,9 @@ const History = ({ history, open, setOpen, loader, setResult }) => {
               />
               <div>
                 <span>{char.name}</span>
-                <button onClick={() => goToCharacter(char)}>
+                <Button onClick={() => goToCharacter(char)}>
                   See all data
-                </button>
+                </Button>
               </div>
             </article>
           );
