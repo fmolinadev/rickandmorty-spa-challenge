@@ -4,6 +4,7 @@ import GET_CHARACTER from "../util/GET_CHARACTER";
 import generateRandomID from "../util/generateRandomID";
 import Character from "./Character";
 import History from "./History";
+import { BodyContainer, CharacterContainer, ToggleMenu } from "../styles/Body";
 
 const Body = () => {
   const [open, setOpen] = useState(false);
@@ -25,17 +26,22 @@ const Body = () => {
   };
 
   return (
-    <>
-      <Character
-        infoCharacter={resultRequest}
-        runInfo={handleButton}
-        loader={loading}
-      />
+    <BodyContainer>
+      <CharacterContainer>
+        <Character
+          infoCharacter={resultRequest}
+          runInfo={handleButton}
+          loader={loading}
+          error={error}
+        />
+      </CharacterContainer>
       <div>
-        <div onClick={() => setOpen(!open)} aria-label="menu">
-          <i className="fi fi-br-ballot"></i>
+        <ToggleMenu>
+          <div onClick={() => setOpen(!open)} aria-label="menu">
+            <i className="fi fi-br-ballot"></i>
+          </div>
           <h5>History</h5>
-        </div>
+        </ToggleMenu>
         {open && (
           <History
             history={history}
@@ -47,7 +53,7 @@ const Body = () => {
           />
         )}
       </div>
-    </>
+    </BodyContainer>
   );
 };
 
