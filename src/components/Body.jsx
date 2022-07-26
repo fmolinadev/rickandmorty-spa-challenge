@@ -9,7 +9,7 @@ const Body = () => {
   const [open, setOpen] = useState(false);
   const [randomID, setID] = useState(generateRandomID());
   // console.log("ID FLAG-->", randomID);
-  const { data, loading } = useQuery(GET_CHARACTER, {
+  const { data, loading, error } = useQuery(GET_CHARACTER, {
     variables: {
       id: randomID,
     },
@@ -25,7 +25,7 @@ const Body = () => {
   };
 
   return (
-    <div>
+    <>
       <Character
         infoCharacter={resultRequest}
         runInfo={handleButton}
@@ -43,10 +43,11 @@ const Body = () => {
             setOpen={setOpen}
             loader={loading}
             setResult={setResult}
+            error={error}
           />
         )}
       </div>
-    </div>
+    </>
   );
 };
 
