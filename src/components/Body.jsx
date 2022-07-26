@@ -4,7 +4,12 @@ import GET_CHARACTER from "../util/GET_CHARACTER";
 import generateRandomID from "../util/generateRandomID";
 import Character from "./Character";
 import History from "./History";
-import { BodyContainer, CharacterContainer, ToggleMenu } from "../styles/Body";
+import {
+  BodyContainer,
+  CharacterContainer,
+  ToggleMenu,
+  HistoryAside,
+} from "../styles/Body";
 
 const Body = () => {
   const [open, setOpen] = useState(false);
@@ -35,13 +40,13 @@ const Body = () => {
           error={error}
         />
       </CharacterContainer>
-      <div>
+      <HistoryAside>
         {resultRequest ? (
           <ToggleMenu>
             <div onClick={() => setOpen(!open)} aria-label="menu">
               <i className="fi fi-br-ballot"></i>
             </div>
-            <h5>View History</h5>
+            <h5> View History</h5>
           </ToggleMenu>
         ) : (
           false
@@ -56,7 +61,7 @@ const Body = () => {
             error={error}
           />
         )}
-      </div>
+      </HistoryAside>
     </BodyContainer>
   );
 };
