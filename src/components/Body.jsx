@@ -42,6 +42,7 @@ const Body = () => {
             open={open}
             setOpen={setOpen}
             loader={loading}
+            setResult={setResult}
           />
         )}
       </div>

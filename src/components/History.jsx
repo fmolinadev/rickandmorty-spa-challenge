@@ -1,10 +1,12 @@
 import React from "react";
 import Loader from "./Loader";
 
-const History = ({ history, open, setOpen, loader }) => {
-  const handle = (history) => {
-    console.log(history);
+const History = ({ history, open, setOpen, loader, setResult }) => {
+  const goToCharacter = (char) => {
+    // console.log("CHAR-->", char);
+    setResult(char);
   };
+
   return (
     <section>
       <div onClick={() => setOpen(!open)}>
@@ -17,7 +19,7 @@ const History = ({ history, open, setOpen, loader }) => {
       ) : (
         history.map((char, index) => {
           return (
-            <article key={index}>
+            <article key={index} style={{ textDecoration: "inherit" }}>
               <img
                 src={char.image}
                 alt="character"
@@ -25,7 +27,7 @@ const History = ({ history, open, setOpen, loader }) => {
               />
               <div>
                 <span>{char.name}</span>
-                <button type="button" onClick={() => handle(char)}>
+                <button onClick={() => goToCharacter(char)}>
                   See all data
                 </button>
               </div>
