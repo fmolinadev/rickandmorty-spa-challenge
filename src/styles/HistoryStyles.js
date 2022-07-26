@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const HistoryContainer = styled.section`
-  height: 350px;
+  height: 280px;
+  padding-top: 15px;
   overflow-y: auto;
   scroll-behavior: smooth;
   ::-webkit-scrollbar-thumb {

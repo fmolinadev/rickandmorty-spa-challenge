@@ -14,7 +14,7 @@ export const DefaultSetting = styled.div`
   padding-top: 19%;
   @media (max-width: 720px) {
     padding-left: 4%;
-    padding-top: 65%;
+    padding-top: 5%;
   }
 `;
 
