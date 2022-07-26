@@ -1,6 +1,14 @@
 import React from "react";
-import ErrorAlert from "./ErrorAlert";
 import { Button } from "../styles/Button";
+import {
+  HistoryContainer,
+  ToggleMenuHistory,
+  Text,
+  CardHistory,
+  ImageHistory,
+  ResumeHistory,
+  Name,
+} from "../styles/History";
 
 const History = ({ history, open, setOpen, loader, error, setResult }) => {
   const goToCharacter = (char) => {
@@ -8,37 +16,35 @@ const History = ({ history, open, setOpen, loader, error, setResult }) => {
     setResult(char);
   };
 
-  if (error) return <ErrorAlert />;
+  if (error) return <Text>Ups...</Text>;
 
   return (
-    <section>
-      <div onClick={() => setOpen(!open)}>
+    <HistoryContainer>
+      <ToggleMenuHistory onClick={() => setOpen(!open)}>
         <i className="fi fi-br-cross"></i>
-      </div>
+      </ToggleMenuHistory>
       {!history.length ? (
-        <h2>Not history</h2>
+        <Text>Not history</Text>
       ) : loader ? (
-        <h4>Updating history...</h4>
+        <Text>Updating history...</Text>
       ) : (
         history.map((char, index) => {
           return (
-            <article key={index} style={{ textDecoration: "inherit" }}>
-              <img
+            <CardHistory key={index} style={{ textDecoration: "inherit" }}>
+              <ImageHistory
                 src={char.image}
                 alt="character"
                 aria-label="character image"
               />
-              <div>
-                <span>{char.name}</span>
-                <Button onClick={() => goToCharacter(char)}>
-                  See all data
-                </Button>
-              </div>
-            </article>
+              <ResumeHistory>
+                <Name>{char.name}</Name>
+                <Button onClick={() => goToCharacter(char)}>View all</Button>
+              </ResumeHistory>
+            </CardHistory>
           );
         })
       )}
-    </section>
+    </HistoryContainer>
   );
 };
 
