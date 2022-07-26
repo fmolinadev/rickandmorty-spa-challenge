@@ -9,6 +9,11 @@ const Web = () => {
             <span>Home</span>
           </Link>
         </li>
+        <li>
+          {/* <Link to="/history" style={noDecoration}> */}
+          <span>History</span>
+          {/* </Link> */}
+        </li>
       </ul>
     </div>
   );
