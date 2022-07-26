@@ -3,6 +3,7 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import Header from "./components/Header/Index.jsx";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
+
 function App() {
   return (
     <>
