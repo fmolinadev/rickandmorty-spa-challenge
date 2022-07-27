@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "../styles/Button";
+import { Alert, ErrorContainer } from "../styles/ErrorPageStyles";
 const Error404 = () => {
+  const noDecoration = { textDecoration: "none", color: "inherit" };
   return (
-    <div>
-      <h4>An error occurred while loading the page.</h4>
-      <button>
-        <Link to="/home">Return to home</Link>
-      </button>
-    </div>
+    <ErrorContainer>
+      <Alert>An error occurred while loading the page.</Alert>
+      <Button>
+        <Link to="/home" style={noDecoration}>
+          Return to home
+        </Link>
+      </Button>
+    </ErrorContainer>
   );
 };
 
