@@ -11,7 +11,7 @@
     "Francisco Daniel Molina"
   ],
   "author": "Francisco D. Molina",
-  "homepage": "https://TheFranciscoMolina.github.io/rickandmorty-spa-challenge",
+  "homepage": "https://TheFranciscoMolina.github.io/rickandmorty-spa-challenge/",
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@testing-library/jest-dom": "^5.16.4",

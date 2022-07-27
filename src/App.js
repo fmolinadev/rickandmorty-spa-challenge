@@ -1,4 +1,4 @@
-import LandingPage from "./pages/LandingPage";
+// import LandingPage from "./pages/LandingPage";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Header from "./components/Header/Index.jsx";
 import Footer from "./components/Footer";
@@ -13,7 +13,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route exact path="/" element={<LandingPage />} />
+        {/* <Route exact path="/" element={<LandingPage />} /> */}
         <Route exact path="/home" element={<HomePage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
