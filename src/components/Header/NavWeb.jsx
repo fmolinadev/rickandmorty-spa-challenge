@@ -5,7 +5,6 @@ const Web = () => {
   return (
     <Navbar>
       <NavbarOptions aria-label="options">
-        <OptionName></OptionName>
         <OptionName>
           {/* {This error is forced to show the error handle if the page is not there.} */}
           <Link to="/about" style={noDecoration}>
