@@ -11,10 +11,11 @@ export const DefaultSetting = styled.div`
   margin: 0 auto;
   text-align: center;
   padding-left: 25%;
-  padding-top: 19%;
+  padding-top: 15%;
   @media (max-width: 720px) {
     padding-left: 4%;
     padding-top: 5%;
+    height: 85vh;
   }
 `;
 
