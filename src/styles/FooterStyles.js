@@ -5,7 +5,7 @@ export const FooterContainer = styled.footer`
   position: absolute;
   bottom: 0;
   width: 100%;
-  heigth: 25px;
+  heigth: 15px;
   max-width: 1400px;
   justify-content: center;
   align-items: center;
