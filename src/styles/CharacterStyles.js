@@ -30,7 +30,8 @@ export const LoaderContainer = styled.div`
   padding-top: 19%;
   @media (max-width: 720px) {
     padding-left: 54%;
-    padding-top: 65%;
+    margin-top: 55%;
+    margin-bottom: 85%;
   }
 `;
 

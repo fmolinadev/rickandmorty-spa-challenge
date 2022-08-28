@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 export const LandingContainer = styled.div`
   display: grid;
-  padding-top: 3%;
+  padding-top: 1%;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
   @media (max-width: 720px) {
     grid-template-columns: 1fr;
     grid-row-gap: 3em;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 `;
 
