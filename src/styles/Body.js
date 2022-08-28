@@ -27,7 +27,7 @@ export const ToggleMenu = styled.div`
   display: flex;
   flex-direction: colum;
   justify-content: flex-end;
-  align-item: center;
+  align-items: center;
   padding-bottom: 7px;
   & i {
     padding-right: 5px;
