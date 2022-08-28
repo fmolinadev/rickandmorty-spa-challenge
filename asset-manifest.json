@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/rickandmorty-spa-challenge/static/js/main.1585e5f0.js",
+    "main.js": "/rickandmorty-spa-challenge/static/js/main.50cbee65.js",
     "static/media/rick-and-morty-characters-png.png": "/rickandmorty-spa-challenge/static/media/rick-and-morty-characters-png.137b70ff46854aeb2738.png",
     "static/media/rick-and-morty-name-png.png": "/rickandmorty-spa-challenge/static/media/rick-and-morty-name-png.9592fc1201bf0788057b.png",
     "static/media/placeholder-img.png": "/rickandmorty-spa-challenge/static/media/placeholder-img.ef3cdf87ca264ad1fc87.png",
     "index.html": "/rickandmorty-spa-challenge/index.html",
-    "main.1585e5f0.js.map": "/rickandmorty-spa-challenge/static/js/main.1585e5f0.js.map"
+    "main.50cbee65.js.map": "/rickandmorty-spa-challenge/static/js/main.50cbee65.js.map"
   },
   "entrypoints": [
-    "static/js/main.1585e5f0.js"
+    "static/js/main.50cbee65.js"
   ]
 }
